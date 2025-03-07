@@ -1,0 +1,106 @@
+:root {
+    --panel-bg: #2a2d32; /* 落ち着いたダークグレー */
+    --member-divider: hsl(336, 62%, 42%); /* やや明るめのグレー */
+    --message-bg: #2a2d32; /* 落ち着いたダークグレー */
+    /*--container-bg: #4B0082; /* 変更したい背景色 */
+}
+
+/* メンバーリストの背景色変更 */
+.content__99f8c,
+.members_c8ffbb,
+.scroller__629e4,
+.messagesWrapper__36d07, .header_f37cb1, .members_c8ffbb, .members_c8ffbb>div, .membersWrap_c8ffbb {
+    background-color: var(--panel-bg);
+}
+
+/* メッセージ背景色変更*/
+.messagesWrapper__36d07 {
+    background-color: var(--message-bg);
+}
+
+/* container_c48ade の背景色変更 
+.container_c48ade {
+    background-color: var(--container-bg);
+}*/
+
+/* メンバーリストのデザイン調整 */
+.members_c8ffbb, .members_c8ffbb>div {
+    border-left: 1px solid var(--member-divider); /*メンバーリストの横の縦線*/
+}
+
+/* メンバーリストの高さ調整 */
+.members_c8ffbb {
+    height: auto;
+    max-height: 100vh;
+}
+
+/* メンバーリストの横幅変更 */
+:not(.ChannelDms-channelmembers-wrap) .membersWrap_c8ffbb, .container_c8ffbb {
+    right: 0;
+    width: unset;
+    min-width: unset;
+    height: 100%;
+}
+
+:not(.ChannelDms-channelmembers-wrap) .members_c8ffbb {
+    width: 65px;
+    transition: width 0.5s ease, box-shadow 0.2s ease, -webkit-box-shadow 0.2s ease;
+}
+
+.ChannelDms-channelmembers-wrap {
+    width: 65px;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    transition: width 0.5s ease, box-shadow 0.2s ease, -webkit-box-shadow 0.2s ease;
+}
+
+/* DMメンバーリストのホバー時の幅変更 */
+:not(.ChannelDms-channelmembers-wrap) .membersWrap_c8ffbb:hover .members_c8ffbb,
+.ChannelDms-channelmembers-wrap:hover {
+    width: 240px;
+    transition: width 0.5s 0s ease, box-shadow 0.2s ease, -webkit-box-shadow 0.2s ease;
+}
+
+/* DMメンバーリストの幅を100%にする */
+.ChannelDms-channelmembers-wrap :is(.membersWrap_c8ffbb, .members_c8ffbb, .privateChannels__35e86),
+html #MemberCount {
+    width: 100%;
+}
+
+/* DMリストのアイテムのマージン変更 */
+.ChannelDms-channelmembers-wrap .item-3XjbnG {
+    margin: 0;
+    transition: margin 0.5s ease;
+}
+.ChannelDms-channelmembers-wrap:hover .item-3XjbnG {
+    margin: 0 8px;
+    transition-delay: 1.25s;
+}
+
+/* DMリストの「閉じるボタン」を隠し、ホバー時にアニメーションで表示 */
+.ChannelDms-channelmembers-wrap .privateChannels__35e86 .closeButton__972a0 {
+    width: 0;
+    margin: 0;
+    padding-right: 0;
+}
+
+.ChannelDms-channelmembers-wrap:hover .privateChannels__35e86 .closeButton__972a0 {
+    animation: floatChannelDmsPrivateChannelsCloseButton 1s 1s forwards;
+}
+
+/* 「閉じるボタン」のアニメーション */
+@keyframes floatChannelDmsPrivateChannelsCloseButton {
+    to {
+        width: 16px;
+        margin: 2px;
+        padding-right: 8px;
+    }
+}
+
+/* メンバーリストのアイコンを丸くする */
+.members_c8ffbb .avatar__991e2,
+.membersWrap_c8ffbb .avatar__991e2,
+.container_c8ffbb .avatar__991e2 {
+    border-radius: 50%;
+}
