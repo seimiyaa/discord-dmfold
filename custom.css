@@ -1,33 +1,3 @@
-:root {
-    --panel-bg: #2a2d32; /* 落ち着いたダークグレー */
-    --member-divider: hsl(336, 62%, 42%); /* やや明るめのグレー */
-    --message-bg: #2a2d32; /* 落ち着いたダークグレー */
-    /*--container-bg: #4B0082; /* 変更したい背景色 */
-}
-
-/* メンバーリストの背景色変更 */
-.content__99f8c,
-.members_c8ffbb,
-.scroller__629e4,
-.messagesWrapper__36d07, .header_f37cb1, .members_c8ffbb, .members_c8ffbb>div, .membersWrap_c8ffbb {
-    background-color: var(--panel-bg);
-}
-
-/* メッセージ背景色変更*/
-.messagesWrapper__36d07 {
-    background-color: var(--message-bg);
-}
-
-/* container_c48ade の背景色変更 
-.container_c48ade {
-    background-color: var(--container-bg);
-}*/
-
-/* メンバーリストのデザイン調整 */
-.members_c8ffbb, .members_c8ffbb>div {
-    border-left: 1px solid var(--member-divider); /*メンバーリストの横の縦線*/
-}
-
 /* メンバーリストの高さ調整 */
 .members_c8ffbb {
     height: auto;
@@ -96,11 +66,4 @@ html #MemberCount {
         margin: 2px;
         padding-right: 8px;
     }
-}
-
-/* メンバーリストのアイコンを丸くする */
-.members_c8ffbb .avatar__991e2,
-.membersWrap_c8ffbb .avatar__991e2,
-.container_c8ffbb .avatar__991e2 {
-    border-radius: 50%;
 }
