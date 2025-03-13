@@ -12,16 +12,9 @@
     height: 100%;
 }
 
+/*サーバー内のメンバーリストの幅*/
 :not(.ChannelDms-channelmembers-wrap) .members_c8ffbb {
     width: 65px;
-    transition: width 0.5s ease, box-shadow 0.2s ease, -webkit-box-shadow 0.2s ease;
-}
-
-.ChannelDms-channelmembers-wrap {
-    width: 65px;
-    position: absolute;
-    right: 0;
-    height: 100%;
     transition: width 0.5s ease, box-shadow 0.2s ease, -webkit-box-shadow 0.2s ease;
 }
 
@@ -36,34 +29,4 @@
 .ChannelDms-channelmembers-wrap :is(.membersWrap_c8ffbb, .members_c8ffbb, .privateChannels__35e86),
 html #MemberCount {
     width: 100%;
-}
-
-/* DMリストのアイテムのマージン変更 */
-.ChannelDms-channelmembers-wrap .item-3XjbnG {
-    margin: 0;
-    transition: margin 0.5s ease;
-}
-.ChannelDms-channelmembers-wrap:hover .item-3XjbnG {
-    margin: 0 8px;
-    transition-delay: 1.25s;
-}
-
-/* DMリストの「閉じるボタン」を隠し、ホバー時にアニメーションで表示 */
-.ChannelDms-channelmembers-wrap .privateChannels__35e86 .closeButton__972a0 {
-    width: 0;
-    margin: 0;
-    padding-right: 0;
-}
-
-.ChannelDms-channelmembers-wrap:hover .privateChannels__35e86 .closeButton__972a0 {
-    animation: floatChannelDmsPrivateChannelsCloseButton 1s 1s forwards;
-}
-
-/* 「閉じるボタン」のアニメーション */
-@keyframes floatChannelDmsPrivateChannelsCloseButton {
-    to {
-        width: 16px;
-        margin: 2px;
-        padding-right: 8px;
-    }
 }
